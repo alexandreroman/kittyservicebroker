@@ -1,0 +1,15 @@
+---
+applications:
+- name: kitty-servicebroker
+  memory: 1G
+  path: servicebroker/target/kittyservicebroker.jar
+  buildpacks:
+  - https://github.com/cloudfoundry/java-buildpack.git
+
+- name: kitty
+  memory: 1G
+  path: serviceconsumer/target/kittyservicebroker-consumer.jar
+  services:
+  - hello-kitty
+  buildpacks:
+  - https://github.com/cloudfoundry/java-buildpack.git

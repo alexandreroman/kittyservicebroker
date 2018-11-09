@@ -1,0 +1,27 @@
+body {
+    background: black;
+    color: white;
+    font-family: sans-serif;
+    font-size: 10pt;
+}
+
+a {
+    font-weight: bold;
+    color: white;
+}
+
+#container {
+    text-align: center;
+    margin: 2em;
+}
+
+#container img {
+    max-height: 800px;
+    max-width: 400px;
+    width: 100%;
+}
+
+#footer {
+    color: #888;
+    margin: 2em 0;
+}
