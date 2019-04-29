@@ -42,10 +42,11 @@ class KittyServiceInstanceBindingService(
                 .build())
     }
 
-    override fun deleteServiceInstanceBinding(req: DeleteServiceInstanceBindingRequest?): Mono<Void> {
+    override fun deleteServiceInstanceBinding(req: DeleteServiceInstanceBindingRequest?): Mono<DeleteServiceInstanceBindingResponse> {
         checkServiceDefinitionAndPlan(req!!.serviceDefinitionId, req.planId)
         instanceBindingManager.delete(req.bindingId)
-        return Mono.empty()
+        return Mono.just(DeleteServiceInstanceBindingResponse.builder()
+                .build())
     }
 
     override fun getServiceInstanceBinding(req: GetServiceInstanceBindingRequest?): Mono<GetServiceInstanceBindingResponse> {
