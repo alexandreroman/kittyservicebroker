@@ -33,7 +33,7 @@
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-open-service-broker</artifactId>
-            <version>3.0.0.RELEASE</version>
+            <version>3.0.1.RELEASE</version>
         </dependency>
 
         <dependency>
